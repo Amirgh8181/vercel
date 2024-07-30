@@ -1,11 +1,17 @@
 import Collection from "@/src/components/Shop/othersection"
+import ProductPreview from "@/src/components/Shop/ShopItem"
 import Category from "@/src/components/Shop/ShowCategory"
+import getShopItems from "@/src/lib/getShopItems"
 
 
 const Shop = async () => {
+  const products = await getShopItems()
+
   return (
     <main className='space-y-[5vmax] mb-7'>
-        <Category />
+
+      <Category />
+      <ProductPreview products={products} />
       <Collection />
     </main>
   )
@@ -24,7 +30,6 @@ import Category from '@/src/components/Shop/ShowCategory'
 import getShopItems from '@/src/lib/getShopItems'
 
   const t=await getTranslations("ShopPage.Hero")
-  const products = await getShopItems()
 
 
         <Hero
@@ -34,6 +39,5 @@ import getShopItems from '@/src/lib/getShopItems'
         title2={t("title2")}
         desc={t("title3")} />
         
-      <ProductPreview products={products} />
   */
 }
