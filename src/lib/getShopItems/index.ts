@@ -2,7 +2,9 @@ import axios from "axios";
 
 
 const getShopItems = async () => {
-    const url = process.env.BACKEND_SOURCE_URL as string
+    const url = process.env.Next_PUBLIC_BACKEND_SOURCE_URL as string
+    console.log(url);
+
     try {
         const req = await axios.get(`${url}/api/products`,
             {
@@ -10,7 +12,7 @@ const getShopItems = async () => {
                     "Content-Type": "application/json"
                 }
             }
-        )        
+        )
         return req.data
     }
     catch (e) {

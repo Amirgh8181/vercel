@@ -1,5 +1,6 @@
+import getSignUpUsers from '@/src/lib/getSuccessSignUpUsers';
 import { z } from 'zod'
-import getSignUpUsers from '@/src/lib/getSuccessSignUpUsers/GetSignUpUsers';
+
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
@@ -8,6 +9,8 @@ interface dataProps {
     email: string,
     password: string
 }
+const url = process.env.NEXT_PUBLIC_BACKEND_SOURCE_URL as string
+
 
 export const SignUpSchema = z.object({
     name: z

@@ -5,6 +5,9 @@ const withNextIntl = createNextIntlPlugin("./src/config/i18n.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    Next_PUBLIC_BACKEND_SOURCE_URL: process.env.Next_PUBLIC_BACKEND_SOURCE_URL,
+  },
   images: {
     domains: ["localhost"],
     remotePatterns: [
@@ -49,7 +52,7 @@ const nextConfig = {
 };
 
 export default withPWA({
-  dest: "public",         // destination directory for the PWA files
-  register: true,         // register the PWA service worker
-  skipWaiting: true,      // skip waiting for service worker activation
-}) (withNextIntl(nextConfig));
+  dest: "public", // destination directory for the PWA files
+  register: true, // register the PWA service worker
+  skipWaiting: true, // skip waiting for service worker activation
+})(withNextIntl(nextConfig));
