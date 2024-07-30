@@ -1,9 +1,10 @@
+import Collection from "@/src/components/Shop/othersection"
 
 
 const Shop = async () => {
   return (
-    <main className='space-y-[5vmax] mb-7 w-full h-screen grid place-content-center text-7xl'>
-      helooo
+    <main className='space-y-[5vmax] mb-7'>
+      <Collection />
     </main>
   )
 }
