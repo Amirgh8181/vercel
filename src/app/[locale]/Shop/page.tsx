@@ -28,7 +28,6 @@ export default Shop
   /*
 
 import ProductPreview from '@/src/components/Shop/ShopItem'
-import Category from '@/src/components/Shop/ShowCategory'
 import getShopItems from '@/src/lib/getShopItems'
 
   const products = await getShopItems()
