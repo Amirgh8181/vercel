@@ -1,8 +1,9 @@
+"use server"
 import axios from 'axios'
 
-const getClinics =async () => {
+const getClinics = async () => {
     const url = process.env.Next_PUBLIC_BACKEND_SOURCE_URL as string
-    const req = await axios.get(`${url}/api/clinics`,)
+    const req = await axios.get(`${url}/api/clinics`)
     if (!req.data) {
         throw new Error("somthin went wrong")
     }
