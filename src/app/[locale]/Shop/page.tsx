@@ -1,9 +1,11 @@
 import Collection from "@/src/components/Shop/othersection"
+import Category from "@/src/components/Shop/ShowCategory"
 
 
 const Shop = async () => {
   return (
     <main className='space-y-[5vmax] mb-7'>
+        <Category />
       <Collection />
     </main>
   )
@@ -19,7 +21,6 @@ import bgImage from "@/public/images/Shop/heroBg.jpg"
 import { getTranslations } from 'next-intl/server'
 import ProductPreview from '@/src/components/Shop/ShopItem'
 import Category from '@/src/components/Shop/ShowCategory'
-import Collection from '@/src/components/Shop/othersection'
 import getShopItems from '@/src/lib/getShopItems'
 
   const t=await getTranslations("ShopPage.Hero")
@@ -33,8 +34,6 @@ import getShopItems from '@/src/lib/getShopItems'
         title2={t("title2")}
         desc={t("title3")} />
         
-      <Category />
       <ProductPreview products={products} />
-      <Collection />
   */
 }
