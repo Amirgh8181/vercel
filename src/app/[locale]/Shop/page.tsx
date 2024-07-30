@@ -8,7 +8,6 @@ import getShopItems from '@/src/lib/getShopItems'
 
 const Shop = async () => {
   const t=await getTranslations("ShopPage.Hero")
-  const products = await getShopItems()
   return (
     <main className='space-y-[5vmax] mb-7'>
       <Hero
