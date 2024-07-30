@@ -2,6 +2,7 @@ import AboutUs from '@/src/components/Home/About-US';
 import ClinicPreview from '@/src/components/Home/ClinicPreview';
 import HeroSection from '@/src/components/Home/Hero';
 import QuestionContainer from '@/src/components/Home/QuestionPreview';
+import ShelterPreview from '@/src/components/Home/ShelterPreview';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <AboutUs />
       <QuestionContainer />
       <ClinicPreview />
-
+      <ShelterPreview />
     </>
   );
 }
@@ -25,5 +26,5 @@ import ShelterPreview from '@/src/components/Home/ShelterPreview';
         
       
       <ShopPreview />
-      <ShelterPreview />
+      
   */}
