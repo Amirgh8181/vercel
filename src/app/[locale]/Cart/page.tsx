@@ -1,7 +1,7 @@
 import CartItems from '@/src/components/Cart/CartItems';
 import ItemsHeader from '@/src/components/Cart/ItemsHeader';
 import PaymentSection from '@/src/components/Cart/PaymentSection';
-const Cart = () => {
+export default function Cart  ()  {
   return (
     <div className='w-[90%] min-h-screen relative flex flex-col md:flex-row md:justify-between md:items-start items-center py-[13dvh]
     space-y-4 md:space-y-0'>
@@ -14,4 +14,3 @@ const Cart = () => {
   )
 }
 
-export default Cart

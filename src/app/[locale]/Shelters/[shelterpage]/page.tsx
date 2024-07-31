@@ -3,7 +3,7 @@ import SheltersSinglePageRightSide from '@/src/components/SheltersSinglePage/Rig
 import getShelterItemPage from '@/src/lib/getShelterItemPage';
 
 
-const ShelterPage = async ({ params }: { params: { shelterpage: string } }) => {
+export default async function ShelterPage ({ params }: { params: { shelterpage: string } }){
     const req = await getShelterItemPage(params.shelterpage)
     console.log(req);
     
@@ -19,9 +19,3 @@ const ShelterPage = async ({ params }: { params: { shelterpage: string } }) => {
     )
 }
 
-export default ShelterPage
-
-{/*
-
-
-    */}

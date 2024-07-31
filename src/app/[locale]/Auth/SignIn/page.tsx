@@ -6,7 +6,7 @@ import mainImage from "@/public/images/AuthPic/login1.png"
 import leftImage from "@/public/images/AuthPic/login2.png"
 import rightImage from "@/public/images/AuthPic/login3.png"
 import { useTranslations } from 'next-intl'
-const LoginContainer = () => {
+export default function LoginContainer () {
     const t=useTranslations("Auth.hoc")
     return (
         <div>
@@ -24,4 +24,4 @@ const LoginContainer = () => {
     )
 }
 
-export default LoginContainer
+

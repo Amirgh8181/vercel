@@ -5,7 +5,7 @@ import bgImage from "@/public/images/Shelters/hero-bg.jpg"
 import { getTranslations } from 'next-intl/server'
 import getShelters from '@/src/lib/getShelters'
 
-const Shelters = async () => {
+export default async function Shelters  ()  {
     const req = await getShelters()
     const t = await getTranslations("Shelter")
 
@@ -24,4 +24,3 @@ const Shelters = async () => {
     )
 }
 
-export default Shelters

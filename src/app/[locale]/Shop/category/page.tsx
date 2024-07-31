@@ -3,7 +3,7 @@ import CategoryProducts from '@/src/components/Shop/CategoryProduce';
 import CategoyPageHeader from '@/src/components/Shop/CategoyPageHeader';
 import getShopItems from '@/src/lib/getShopItems';
 
-const Category = async () => {
+export default async function Category  () {
     const request: ShopItem[] = await getShopItems()
 
 
@@ -14,5 +14,3 @@ const Category = async () => {
         </main>
     )
 }
-
-export default Category;

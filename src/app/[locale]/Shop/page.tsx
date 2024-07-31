@@ -5,9 +5,11 @@ import bgImage from "@/public/images/Shop/heroBg.jpg"
 import { Hero } from '@/ui/Hero'
 import { getTranslations } from 'next-intl/server'
 import getShopItems from '@/src/lib/getShopItems'
+import ProductPreview from "@/src/components/Shop/ShopItem"
 
-const Shop = async () => {
+export default async function Shop  ()  {
   const t=await getTranslations("ShopPage.Hero")
+  const products=await getShopItems()
   return (
     <main className='space-y-[5vmax] mb-7'>
       <Hero
@@ -17,23 +19,9 @@ const Shop = async () => {
         title2={t("title2")}
         desc={t("title3")} />
       <Category />
+      <ProductPreview products={products} />
       <Collection />
     </main>
   )
 }
 
-export default Shop
-
-{
-  /*
-
-import ProductPreview from '@/src/components/Shop/ShopItem'
-
-  
-
-
-
-        
-      <ProductPreview products={products} />
-  */
-}

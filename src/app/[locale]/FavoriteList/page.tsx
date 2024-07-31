@@ -1,6 +1,6 @@
 import FavoriteItem from '@/src/components/FavoriteList/FavoriteItem'
 
-const FavoriteList = () => {
+export default function FavoriteList ()  {
 
   return (
 
@@ -8,5 +8,3 @@ const FavoriteList = () => {
 
   )
 }
-
-export default FavoriteList

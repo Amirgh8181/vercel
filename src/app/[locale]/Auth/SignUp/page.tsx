@@ -5,7 +5,7 @@ import leftImage from "@/public/images/AuthPic/signUp2.png"
 import rightImage from "@/public/images/AuthPic/login3.png"
 import AuthHoc from '@/src/components/UI/Hoc/AuthHoc/inddex'
 import { useTranslations } from 'next-intl'
-const SignUpContainer = () => {
+export default function SignUpPage() {
     const t=useTranslations("Auth.hoc")
     return (
         <AuthHoc
@@ -22,4 +22,3 @@ const SignUpContainer = () => {
     )
 }
 
-export default SignUpContainer

@@ -6,7 +6,7 @@ import leftImage from "@/public/images/Question/secondary.png"
 import rightImage from "@/public/images/Question/secondary2.png"
 import { useTranslations } from 'next-intl'
 
-const Question = () => {
+export default function Question  ()  {
   const t=useTranslations("PersonalityTest.hoc")
   return (
     <QuestionHoc
@@ -21,4 +21,3 @@ const Question = () => {
   )
 }
 
-export default Question
