@@ -6,7 +6,8 @@ const withNextIntl = createNextIntlPlugin("./src/config/i18n.ts");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    Next_PUBLIC_BACKEND_SOURCE_URL: process.env.Next_PUBLIC_BACKEND_SOURCE_URL,
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_CLIENT_URL: process.env.NEXT_PUBLIC_CLIENT_URL,
   },
   images: {
     domains: ["localhost"],

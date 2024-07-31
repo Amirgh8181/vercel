@@ -6,6 +6,9 @@ import getClinics from '@/src/lib/getClinics';
 
 const Clinics = async () => {
     const t = await getTranslations("Clinic")
+    const req=await getClinics()
+    console.log(req);
+    
     return (
         <>
             <Hero
