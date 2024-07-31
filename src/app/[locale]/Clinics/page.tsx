@@ -4,11 +4,13 @@ import bgImage from "@/public/images/Clinics/hero bg.jpg"
 import { getTranslations } from 'next-intl/server';
 import getClinics from '@/src/lib/getClinics';
 
-const Clinics = async () => {
+export const revalidate = 3600
+
+export default async function Clinics() {
     const t = await getTranslations("Clinic")
-    const req=await getClinics()
+    const req = await getClinics()
     console.log(req);
-    
+
     return (
         <>
             <Hero
@@ -22,7 +24,7 @@ const Clinics = async () => {
     )
 }
 
-export default Clinics
+
 
 {/*
 import ClinicAndShelterCard from '@/src/components/UI/clinicAndShelterCard'
