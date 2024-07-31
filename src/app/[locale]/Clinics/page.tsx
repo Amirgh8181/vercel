@@ -19,11 +19,7 @@ export default async function Clinics() {
                 title={t("Hero.title")}
                 desc={t("Hero.description")}
             />
-            {
-                req.map(item =>
-                    <p key={item._id}>{item.name}</p>
-                )
-            }
+
         </>
     )
 }
