@@ -3,13 +3,14 @@ import mainImg from "@/public/images/Clinics/hero-pic.jpg"
 import bgImage from "@/public/images/Clinics/hero bg.jpg"
 import { getTranslations } from 'next-intl/server';
 import getClinics from '@/src/lib/getClinics';
-import ClinicAndShelterCard from '@/src/components/UI/clinicAndShelterCard';
+import { clinicAndSheltersData } from '@/root/types';
 
-export const revalidate = 3600
 
 export default async function Clinics() {
     const t = await getTranslations("Clinic")
-    const req = await getClinics()
+    const req: clinicAndSheltersData[] = await getClinics()
+    console.log(req);
+
     return (
         <>
             <Hero
@@ -18,8 +19,11 @@ export default async function Clinics() {
                 title={t("Hero.title")}
                 desc={t("Hero.description")}
             />
-
-            <p>{JSON.stringify(req)}</p>
+            {
+                req.map(item =>
+                    <p>{item.name}</p>
+                )
+            }
         </>
     )
 }
