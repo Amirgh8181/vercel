@@ -4,6 +4,7 @@ import bgImage from "@/public/images/Clinics/hero bg.jpg"
 import { getTranslations } from 'next-intl/server';
 import getClinics from '@/src/lib/getClinics';
 import { clinicAndSheltersData } from '@/root/types';
+import ClinicAndShelterCard from '@/src/components/UI/clinicAndShelterCard';
 
 
 export default async function Clinics() {
@@ -20,12 +21,12 @@ export default async function Clinics() {
                 desc={t("Hero.description")}
             />
 
+            <div className='w-full min-h-screen mt-6'>
+                <ClinicAndShelterCard href='/Clinics/' data={req} headerText={t("Card.head")} />
+            </div>
         </>
     )
 }
 
 {/*
-                <div className='w-full min-h-screen mt-6'>
-                <ClinicAndShelterCard href='/Clinics/' data={req} headerText={t("Card.head")} />
-            </div>
     */}
