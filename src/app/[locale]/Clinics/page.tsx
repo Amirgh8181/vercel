@@ -10,7 +10,6 @@ import ClinicAndShelterCard from '@/src/components/UI/clinicAndShelterCard';
 export default async function Clinics() {
     const t = await getTranslations("Clinic")
     const req: clinicAndSheltersData[] = await getClinics()
-    console.log(req);
 
     return (
         <>
@@ -27,6 +26,3 @@ export default async function Clinics() {
         </>
     )
 }
-
-{/*
-    */}
