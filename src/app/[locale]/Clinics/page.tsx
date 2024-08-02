@@ -6,10 +6,17 @@ import getClinics from '@/src/lib/getClinics';
 import { clinicAndSheltersData } from '@/root/types';
 import ClinicAndShelterCard from '@/src/components/UI/clinicAndShelterCard';
 
+interface aa {
+    userId: number,
+    id: number,
+    title: string
+    body: string
+}
 
 export default async function Clinics() {
     const t = await getTranslations("Clinic")
-    const req: clinicAndSheltersData[] = await getClinics()
+    const req: aa[] = await getClinics()
+    console.log(req);
 
     return (
         <>
@@ -20,7 +27,9 @@ export default async function Clinics() {
                 desc={t("Hero.description")}
             />
 
-
+            {req?.map(item =>
+                <p key={item.id}>{item.title}</p>
+            )}
         </>
     )
 }
