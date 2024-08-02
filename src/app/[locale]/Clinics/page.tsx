@@ -20,9 +20,12 @@ export default async function Clinics() {
                 desc={t("Hero.description")}
             />
 
-            <div className='w-full min-h-screen mt-6'>
-                <ClinicAndShelterCard href='/Clinics/' data={req} headerText={t("Card.head")} />
-            </div>
+
         </>
     )
 }
+{/*
+                <div className='w-full min-h-screen mt-6'>
+                <ClinicAndShelterCard href='/Clinics/' data={req} headerText={t("Card.head")} />
+            </div>
+    */}
