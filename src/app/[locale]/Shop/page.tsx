@@ -12,10 +12,6 @@ const ProductPreview = dynamic(() => import('@/src/components/Shop/ShopItem'));
 const ShopSliders = dynamic(() => import('@/src/components/Shop/Sliders'));
 const Collection = dynamic(() => import('@/src/components/Shop/othersection'));
 
-
-
-
-
 const Shop = () => {
   //const products: ShopItem[] = await getShopItems()
   const products = productData as ShopItem[]
